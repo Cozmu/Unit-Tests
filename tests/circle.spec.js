@@ -29,7 +29,7 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     expect(typeof circle(5)).toBe('object');
   })
   it('Teste se o objeto retornado possui 3 propriedades.', () => {
-    expect(Object.keys(circle(5))).toHaveLength(3); //toHaveLength
+    expect(Object.keys(circle(5)).length).toBe(3); //toHaveLength
   })
   it('Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.', () => {
     expect(circle()).toBeUndefined();
