@@ -41,5 +41,5 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
-
+ console.log(productDetails('legal')[1].details.productId);
 module.exports = productDetails;
