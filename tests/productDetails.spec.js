@@ -45,10 +45,10 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
   });
   it('Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.', () => {
     expect(productDetails('um','dois')[0]).not.toEqual(productDetails('um','dois')[1]);
-    // expect(productDetails('algodão', 'pirulito')[0]).not.toMatchObject(productDetails('algodão','pirulito')[1]) 
+    //expect(productDetails('algodão', 'pirulito')[0]).not.toMatchObject(productDetails('algodão','pirulito')[1]) 
   });
   it('Teste se os dois productIds terminam com 123.', () => {
     expect(productDetails('um', 'dois')[0].details.productId).toBe('um123');
     expect(productDetails('um', 'dois')[1].details.productId).toBe('dois123');
   });
-});
+}); 
