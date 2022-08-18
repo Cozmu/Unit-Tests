@@ -21,7 +21,7 @@ const vqv = (nome, idade) => {
   if (!nome || !idade) {
     return undefined;
   }
-  let frase = `Oi, meu nome é ${nome}! 
+  let frase = `Oi, meu nome é ${nome}!
 Tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
 #VQV!`;
