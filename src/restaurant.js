@@ -71,54 +71,40 @@
   createMenu.BuscaMenu.consumption.push(string);
   // e esse objeto de parametro => { food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }
 }
- */const createMenu = (myMenu) => {
-  let restaurante = {};
-  restaurante.fetchMenu = () => myMenu;
-  restaurante.consumption = ['agua'];
-  restaurante.order = (string) => {
-    restaurante.consumption.push(string);
-  };
+ */
+const createMenu = (myMenu) => {
   let comidas = myMenu.food;
   let pedidoComida = Object.keys(comidas);
 
   let bebidas = myMenu.drink;
   let pedidoBebidas = Object.keys(bebidas);
 
-  restaurante.pay = () => {
-    let soma = 0;
-    for (let index = 0; index < restaurante.consumption.length; index += 1) {
-      if (restaurante.consumption[index] === pedidoComida) {
-        soma += //pedidoComida['sopa']
-      } else if (restaurante.consumption[index] === pedidoBebidas) {
-        soma += //
-      }
-    }
-  };
-
-  return restaurante;
-};
-let cliente = createMenu({ food: { coxinha: 3.9, sopa: 9.9 }, drink: { agua: 3.9, cerveja: 6.9 } }).order('coxinha');
-// let x = myMenu;
-// for (let index = 0; index < x.length; index += 1) {
-//   let pedido = Object.keys(x[index]);
-//   restaurante.consumption.push(pedido);
-// } 
-//  createMenu({ food: { coxinha: 3.9, sopa: 9.9 }, drink: { agua: 3.9, cerveja: 6.9 } });
-// console.log(x);
-// x.order('coca-cola');
-// console.log(x);
-/* fetchMenu: () => myMenu,
+  let restaurante = {
+    fetchMenu: () => myMenu,
     consumption: [],
-    order: (string) => { // Object.keys do myMenu
-
-      Object.entries(myMenu[1]);
-      // consumption.push(string); 
+    order: (string) => {
+      restaurante.consumption.push(string);
     },
-    pay: () => { // Object.values 
+    pay: () => {
+      let soma = 0;
+        if (restaurante.consumption.includes(pedidoComida)) {
+          // soma += pedidoComida['sopa']
+          for (let index = 0; index < pedidoBebidas.length; index += 1) {
+           
+            
+          }
+        }
+        if (restaurante.consumption.includes(pedidoBebidas)) {
+          // soma += 
+        }
+    },
+  };
+    return restaurante;
+  };
+  // for (let index = 0; index < restaurante.consumption.length; index += 1) {}
 
-    }, */
 
-/* 
+/*
 Desenvolvimento:
   - Uma função:
     createMenu()
