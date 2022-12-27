@@ -89,10 +89,7 @@ const createMenu = (myMenu) => {
       let soma = 0;
         if (restaurante.consumption.includes(pedidoComida)) {
           // soma += pedidoComida['sopa']
-          for (let index = 0; index < pedidoBebidas.length; index += 1) {
-           
-            
-          }
+          
         }
         if (restaurante.consumption.includes(pedidoBebidas)) {
           // soma += 
@@ -102,7 +99,6 @@ const createMenu = (myMenu) => {
     return restaurante;
   };
   // for (let index = 0; index < restaurante.consumption.length; index += 1) {}
-
 
 /*
 Desenvolvimento:
